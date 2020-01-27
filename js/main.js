@@ -36,8 +36,9 @@ if ( lang === 'ru' || lang === 'en' ) {
 
 // Задание 2 
 let namePerson = prompt('Как тебя зовут?');
+namePerson.toLowerCase();
 
-namePerson.toLowerCase() === 'артем' ||
-namePerson.toLowerCase() === 'артём' ? console.log('Директор') : 
-namePerson.toLowerCase() === 'максим' ? console.log('Преподаватель') :
+namePerson === 'артем' ||
+namePerson === 'артём' ? console.log('Директор') : 
+namePerson === 'максим' ? console.log('Преподаватель') :
 console.log('Студент');
