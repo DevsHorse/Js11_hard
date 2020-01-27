@@ -35,10 +35,10 @@ if ( lang === 'ru' || lang === 'en' ) {
 
 
 // Задание 2 
-let namePerson = prompt('Как тебя зовут?');
-namePerson.toLowerCase();
+let namePerson = prompt('Как тебя зовут?').toLowerCase();
 
 namePerson === 'артем' ||
 namePerson === 'артём' ? console.log('Директор') : 
 namePerson === 'максим' ? console.log('Преподаватель') :
 console.log('Студент');
+
