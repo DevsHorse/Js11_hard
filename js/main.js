@@ -11,14 +11,14 @@ for (let i = 0; i < arr.length; i++) {
 
 console.log(newArr);
 
-
+// Первый способ с меткой 
 function getSimpleNums() {
 
-  firstFor:                         // метка первого цикла 
-  for (let i = 2; i <= 100; i++) {  // перебираем числа до 100 
-    for (let k = 2; k < i; k++) {   // делим каждое число из 1 цикла на все предыдущие в поисках делителя 
+  firstFor:                         
+  for (let i = 2; i <= 100; i++) {  
+    for (let k = 2; k < i; k++) {    
       if (i % k === 0) {
-        continue firstFor;          // запускаем следующую итерацию 1 цикла , что бы не выводить не простое число
+        continue firstFor;
       }
     }
     console.log(i + ': ' + 'Делители этого числа - 1 и ' + i); // 
@@ -27,3 +27,30 @@ function getSimpleNums() {
 };
 
 getSimpleNums();
+
+
+
+// Второй способ, без использования метки 
+function secondTry() {
+  const arr = [];
+
+  for (let i = 2; i < 100; i++) {
+    let j = 1;
+    let dividers = 0;
+      while (j < 100) {
+        if (i % j === 0) {
+          dividers += 1;
+        }
+        j++;
+      }
+    if (dividers === 2) {
+      arr.push(i);
+    }
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i] + ': Делители этого числа - 1 и ' + arr[i] +'\n');
+  }
+};
+
+secondTry();
