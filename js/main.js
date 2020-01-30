@@ -1,3 +1,5 @@
+'use strict';
+
 let userAnswer = prompt('Введите текст', 'Что ж там такое интересное я написал прям ужас непонятно');
 
 function getString(string) {
@@ -10,7 +12,7 @@ function getString(string) {
   } 
 
   return string;
-};
+}
 
 
 console.log('Результат: ', getString(userAnswer));
