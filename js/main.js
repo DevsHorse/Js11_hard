@@ -7,7 +7,7 @@ for (let i = 0; i < arr.length; i++) {
   if ( arr[i].substring(0, 1) === '2' || arr[i].substring(0, 1) === '4' ) {
     newArr.push(arr[i]);
   }
-};
+}
 
 console.log(newArr);
 
@@ -24,7 +24,7 @@ function getSimpleNums() {
     console.log(i + ': ' + 'Делители этого числа - 1 и ' + i); // 
   }
   
-};
+}
 
 getSimpleNums();
 
@@ -51,6 +51,6 @@ function secondTry() {
   for (let i = 0; i < arr.length; i++) {
     console.log(arr[i] + ': Делители этого числа - 1 и ' + arr[i] +'\n');
   }
-};
+}
 
 secondTry();
