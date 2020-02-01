@@ -5,7 +5,11 @@ let week = ['Понедельник', 'Вторник', 'Среда', 'Четв�
   currentDate = new Date();
 
 function getDate(date) {
-  return week[date.getDay() - 1];
+  if (date.getDay() === 0) {
+    return week[date.getDay() + 6];
+  } else {
+    return week[date.getDay() - 1];
+  }
 }
 
 (function pushWeek() {
@@ -14,7 +18,11 @@ function getDate(date) {
     div.appendChild(divDay);
     divDay.style = 'margin-bottom: 5px;';
     if (getDate(currentDate) === week[i]) {
-      divDay.innerHTML = week[i].bold().italics();
+      if (getDate(currentDate) === week[5] || getDate(currentDate) === week[6]) {
+        divDay.innerHTML = week[i].bold().italics();
+      } else {
+        divDay.innerHTML = week[i].bold();
+      }
     } else if (i === 5 || i === 6) {
       divDay.innerHTML = week[i].italics();
     } else {
