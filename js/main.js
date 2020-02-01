@@ -15,7 +15,7 @@ function getDate(date) {
     divDay.style = 'margin-bottom: 5px;';
     if (getDate(currentDate) === week[i]) {
       divDay.innerHTML = week[i].bold().italics();
-    } else if (i === 0 || i === 6) {
+    } else if (i === 5 || i === 6) {
       divDay.innerHTML = week[i].italics();
     } else {
       divDay.innerHTML = week[i];
