@@ -1,6 +1,5 @@
 'use strict';
 
-
 let  div1 = document.createElement('div'),
   div2 = document.createElement('div'),
   body = document.querySelector('body'),
@@ -61,18 +60,7 @@ function getZero(date) {
     ' ' + date.getFullYear() + " года, " + getEnd(date.getHours(), 'hour')+ ' ' + getEnd(date.getMinutes(), 'min') + 
     ' ' + getEnd(date.getSeconds());
   
- div2.textContent = getZero(date.getDate()) + "." + getZero(date.getMonth()) +
+ div2.textContent = getZero(date.getDate()) + "." + getZero(date.getMonth() + 1) +
    "." + date.getFullYear() + " - " + getZero(date.getHours()) + ':' + 
    getZero(date.getMinutes()) + ':' + getZero(date.getSeconds());
 }, 1000);
-
-
-
-
-
-// div1.textContent = 'Сегодня ' + weekDays[date.getDay()] + ', ' + date.getDate() + ' ' + monthes[date.getMonth()] +
-//   ' ' + date.getFullYear() + " года, " + getEnd(date.getHours(), 'hour')+ ' ' + getEnd(date.getMinutes(), 'min') + 
-//   ' ' + getEnd(date.getSeconds());
-
-
-
